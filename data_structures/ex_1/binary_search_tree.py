@@ -7,12 +7,17 @@ class BinarySearchTree:
   def depth_first_for_each(self, cb):
     cb(self.value)
     if self.left:
-      self.left.depth_first_for_each()
+      self.left.depth_first_for_each(cb)
     if self.right:
-      self.right.depth_first_for_each()  
+      self.right.depth_first_for_each(cb)  
     pass    
 
   def breadth_first_for_each(self, cb):
+    queue = []
+    if self.left:
+      queue.append.self.left
+    if self.right:
+      queue.append.self.right  
     # start at node
     # go left then keep going right
     # go level down and repeat by starting left and keep going right 
